@@ -6,7 +6,7 @@
     "lib": ["ESNext"],
     "moduleResolution": "Node",
     "rootDir": "./src",
-    "outDir": "./dist",
+    "outDir": "./lib",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noImplicitUseStrict": false,
