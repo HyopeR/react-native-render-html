@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { SourceLoaderProps } from './internal-types';
 import RenderTTree from './RenderTTree';
+import { SourceLoaderProps } from './internal-types';
 import { HTMLSourceInline } from './shared-types';
 
 export type InlineSourceLoaderProps = {

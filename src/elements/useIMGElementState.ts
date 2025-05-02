@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 import { Image, ImageURISource } from 'react-native';
+import { ImageDimensions } from '../shared-types';
+import defaultImageInitialDimensions from './defaultInitialImageDimensions';
+import { getIMGState } from './getIMGState';
 import {
   UseIMGElementStateProps,
   IMGElementState,
   IncompleteImageDimensions
 } from './img-types';
-import defaultImageInitialDimensions from './defaultInitialImageDimensions';
 import useIMGNormalizedSource from './useIMGNormalizedSource';
-import { ImageDimensions } from '../shared-types';
 import useImageConcreteDimensions from './useImageConcreteDimensions';
-import { getIMGState } from './getIMGState';
 import useImageSpecifiedDimensions from './useImageSpecifiedDimensions';
 
 function getImageSizeAsync({

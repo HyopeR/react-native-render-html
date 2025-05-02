@@ -49,7 +49,6 @@ export default function buildTREFromConfig(props: TRenderEngineConfig) {
     if (fallbackFonts[fontFamily as keyof typeof fallbackFonts]) {
       return fallbackFonts[fontFamily as keyof typeof fallbackFonts];
     }
-    /* istanbul ignore next */
     return fontMap[fontFamily] || false;
   };
   return new TRenderEngine({

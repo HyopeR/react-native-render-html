@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
+import RenderTTree from './RenderTTree';
 import { HTMLSourceUri } from './shared-types';
 import { SourceLoaderProps } from './internal-types';
-import RenderTTree from './RenderTTree';
 import sourceLoaderContext from './context/sourceLoaderContext';
 
 interface LoaderInternalState {

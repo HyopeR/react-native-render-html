@@ -1,6 +1,6 @@
 import React from 'react';
-import { SourceLoaderProps } from './internal-types';
 import RenderTTree from './RenderTTree';
+import { SourceLoaderProps } from './internal-types';
 import { HTMLSourceDom } from './shared-types';
 
 export type DomSourceLoaderProps = {

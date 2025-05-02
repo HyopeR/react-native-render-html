@@ -1,7 +1,7 @@
 import React from 'react';
 import { GestureResponderEvent } from 'react-native';
-import { InternalMixedRenderer } from '../render/render-types';
 import { TNode, DocumentContext } from '@native-html/transient-render-engine';
+import { InternalMixedRenderer } from '../render/render-types';
 import { InternalRendererProps, RenderersProps } from '../shared-types';
 import useNormalizedUrl from '../hooks/useNormalizedUrl';
 import { useDocumentMetadata } from '../context/DocumentMetadataProvider';

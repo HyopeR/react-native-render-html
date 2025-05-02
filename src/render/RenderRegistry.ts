@@ -4,12 +4,12 @@ import { CustomRendererProps } from '../index';
 import lookupRecord from '../helpers/lookupRecord';
 import BRRenderer from '../renderers/BRRenderer';
 import WBRRenderer from '../renderers/WBRRenderer';
+import internalRenderers from './internalRenderers';
 import {
   CustomRenderer,
   HTMLElementModelRecord,
   InternalRenderer
 } from '../shared-types';
-import internalRenderers from './internalRenderers';
 import {
   CustomTagRendererRecord,
   InternalTextContentRenderer
@@ -42,7 +42,6 @@ export default class RenderRegistry {
   ): ComponentType<CustomRendererProps<T>> | null {
     if (tnode.tagName! in this.customRenderers) {
       const renderer = this.customRenderers[tnode.tagName!];
-      /* istanbul ignore next */
       if (typeof __DEV__ === 'boolean' && __DEV__) {
         // In DEV, check for discrepancies.
         const elementModel = this.elementModels[tnode.tagName!];

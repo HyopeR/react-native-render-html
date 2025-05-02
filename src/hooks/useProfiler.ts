@@ -28,8 +28,7 @@ const useProfiler =
         );
         return profile;
       }
-    : /* istanbul ignore next */
-      function useProfiler() {
+    : function useProfiler() {
         return identity as () => void;
       };
 

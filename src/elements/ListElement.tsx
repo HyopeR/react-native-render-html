@@ -10,8 +10,8 @@ import type {
   TChildProps
 } from '../shared-types';
 import { useTChildrenRenderer } from '../context/TChildrenRendererContext';
-import { DEFAULT_TEXT_COLOR } from '../constants';
 import { useListStyleSpecs } from '../context/ListStyleSpecsProvider';
+import { DEFAULT_TEXT_COLOR } from '../constants';
 
 export interface ListElementProps<T extends 'ol' | 'ul'>
   extends InternalRendererProps<TBlock>,

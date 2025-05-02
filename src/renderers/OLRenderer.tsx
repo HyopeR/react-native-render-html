@@ -14,12 +14,8 @@ function getFallbackListStyleTypeFromNestLevel(
   switch (nestLevel % 3) {
     case 0:
       return 'decimal';
-
-    /* istanbul ignore next */
     case 1:
       return 'upper-alpha';
-
-    /* istanbul ignore next */
     default:
       return 'lower-alpha';
   }

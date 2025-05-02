@@ -33,7 +33,6 @@ function RawSourceLoader({
   ...props
 }: SourceLoaderProps): ReactElement | null {
   if (isEmptySource(source)) {
-    /* istanbul ignore next */
     if (typeof __DEV__ === 'boolean' && __DEV__) {
       console.warn(debugMessage.noSource);
     }

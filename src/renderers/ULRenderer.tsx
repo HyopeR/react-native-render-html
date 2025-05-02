@@ -14,12 +14,8 @@ function getFallbackListStyleTypeFromNestLevel(
   switch (nestLevel % 3) {
     case 0:
       return 'disc';
-
-    /* istanbul ignore next */
     case 1:
       return 'circle';
-
-    /* istanbul ignore next */
     default:
       return 'square';
   }

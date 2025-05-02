@@ -7,6 +7,7 @@ export async function defaultAOnPress(_e: any, href: string): Promise<unknown> {
   } catch (e) {
     console.warn(`Could not open URL "${href}".`, e);
   }
+
   return null;
 }
 

@@ -9,8 +9,8 @@ import {
 } from '@native-html/transient-render-engine';
 import useAssembledCommonProps from './hooks/useAssembledCommonProps';
 import { useTNodeChildrenRenderer } from './context/TChildrenRendererContext';
-import renderTextualContent from './renderTextualContent';
 import { useRendererRegistry } from './context/RenderRegistryProvider';
+import renderTextualContent from './renderTextualContent';
 import renderBlockContent from './renderBlockContent';
 import renderEmptyContent from './renderEmptyContent';
 

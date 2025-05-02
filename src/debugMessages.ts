@@ -17,7 +17,6 @@ export type DebugType =
 let debugMessage: Record<DebugType, string>;
 
 export type DebugMessages = typeof debugMessage;
-/* istanbul ignore next */
 if (typeof __DEV__ === 'boolean' && __DEV__) {
   debugMessage = {
     outdatedComputeImagesMaxWidth:

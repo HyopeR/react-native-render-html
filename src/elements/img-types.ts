@@ -6,8 +6,8 @@ import {
   ViewProps,
   ViewStyle
 } from 'react-native';
-import { ImageDimensions } from '../shared-types';
 import { WebBlockStyles } from '@native-html/transient-render-engine';
+import { ImageDimensions } from '../shared-types';
 
 /**
  * Props for {@link useIMGElementStateWithCache} hook.
