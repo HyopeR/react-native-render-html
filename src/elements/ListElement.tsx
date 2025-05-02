@@ -1,5 +1,5 @@
-import { StyleSheet, View } from 'react-native';
 import React from 'react';
+import { StyleSheet, View } from 'react-native';
 import { TBlock, TNode } from '@native-html/transient-render-engine';
 import { MarkedListItem, useMarkedList } from '@jsamr/react-native-li';
 import { pick } from 'ramda';
@@ -152,14 +152,14 @@ export default function ListElement({
     ? ('paddingRight' as const)
     : ('paddingLeft' as const);
   // Fallback to padding-left value on RTL mode
-  const paddingValue = style[fixedPaddingRule] ?? style.paddingLeft;
+  const paddingValue: any = style[fixedPaddingRule] ?? style.paddingLeft;
   const markerBoxWidthStyle = getMarkerBoxStyle(markerWidth, paddingValue);
   const renderChild = ({ childElement, key, index }: TChildProps) => (
     <MarkedListItem
       key={key}
       index={index}
       {...itemProps}
-      markerBoxStyle={[itemProps.markerBoxStyle, markerBoxWidthStyle]}
+      markerBoxStyle={[itemProps.markerBoxStyle, markerBoxWidthStyle as any]}
       markerTextStyle={itemProps.markerTextStyle}
       enableMarkerClipping
       style={itemProps.style}>

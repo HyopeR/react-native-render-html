@@ -6,7 +6,6 @@
     "lib": ["ESNext"],
     "moduleResolution": "Node",
     "rootDir": "./src",
-    "outDir": "./lib",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noImplicitUseStrict": false,
@@ -19,7 +18,9 @@
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "include": ["./src"],
   "exclude": ["node_modules", "lib"]

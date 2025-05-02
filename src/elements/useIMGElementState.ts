@@ -72,26 +72,24 @@ function useFetchedNaturalDimensions(props: {
   const { error, naturalDimensions, onError, onNaturalDimensions } =
     useImageNaturalDimensions(props);
   const hasCachedDimensions = !!cachedNaturalDimensions;
-  useEffect(
-    function fetchPhysicalDimensions() {
-      let cancelled = false;
-      if (source.uri && !hasCachedDimensions) {
-        getImageSizeAsync({ uri: source.uri, headers: source.headers })
-          .then((dimensions) => !cancelled && onNaturalDimensions(dimensions))
-          .catch((e) => !cancelled && onError(e || {}));
-        return () => {
-          cancelled = true;
-        };
-      }
-    },
-    [
-      source.uri,
-      source.headers,
-      onNaturalDimensions,
-      onError,
-      hasCachedDimensions
-    ]
-  );
+
+  useEffect(() => {
+    let cancelled = false;
+    if (source.uri && !hasCachedDimensions) {
+      getImageSizeAsync({ uri: source.uri, headers: source.headers })
+        .then((dimensions) => !cancelled && onNaturalDimensions(dimensions))
+        .catch((e) => !cancelled && onError(e || {}));
+    }
+    return () => {
+      cancelled = true;
+    };
+  }, [
+    source.uri,
+    source.headers,
+    onNaturalDimensions,
+    onError,
+    hasCachedDimensions
+  ]);
   return {
     naturalDimensions,
     error,

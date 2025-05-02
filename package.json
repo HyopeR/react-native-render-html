@@ -62,7 +62,8 @@
     "source": "src",
     "output": "lib",
     "targets": [
-      "commonjs"
+      "commonjs",
+      "typescript"
     ]
   },
   "dependencies": {
