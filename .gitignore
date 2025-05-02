@@ -56,7 +56,3 @@ coverage/
 lib/
 test.html
 
-# old sources
-/src/
-/Demo/
-/types/
